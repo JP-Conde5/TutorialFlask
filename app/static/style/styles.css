@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.hd{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    background-color: #9ebfbf;
+}
+img{
+    width: 3rem;
+    margin: 1rem;
+}
