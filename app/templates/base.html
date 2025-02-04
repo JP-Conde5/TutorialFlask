@@ -12,8 +12,20 @@
 </head>
 <body>
     <header class="container-fluid hd">
-        <img src="{{url_for('static', filename='assets/rede.png')}}" alt="Site">
-        <h1>Meu site</h1>
+          <div class="col-8">
+                <div class="row title">
+                    <img src="{{url_for('static', filename='assets/rede.png')}}" alt="Site">
+                    <h1>Meu site</h1>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <a href="/" class="p-2 text-dark" >Inicio</a>
+                    <a href="/pagina2" class="p-2 text-dark" >Cadastar</a>
+                    <a href="/bootstrap" class="p-2 text-dark" >Bootstrap</a>
+                </div>
+            </div>
+        </div>          
     </header>
     
     {% block conteudo %}

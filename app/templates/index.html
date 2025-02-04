@@ -1,8 +1,29 @@
 {% extends 'base.html' %}
     {% block conteudo %}
-        <p>Eba meu primeiro site</p>
-        <br>
-        <a href="/pagina2">Página 2</a>
-        <br>
-        <a href="/bootstrap">Teste do Bootstrap</a>
+    <br>
+        <div class="container">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Domínio</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for site in sites %}
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>{{site.nome}}</td>
+                    <td>{{site.dominio}}</td>
+                    <td>
+                        <a href="/editar/{{site.id}}" class="btn btn-outline-primary">Editar</a>
+                        <a href="/deletar/{{site.id}}" class="btn btn-outline-danger">Deletar</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% endblock %}

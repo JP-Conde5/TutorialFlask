@@ -8,9 +8,12 @@
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
     width: 100%;
     background-color: #9ebfbf;
+}
+.title{
+    display: flex;
+    align-items: center;
 }
 img{
     width: 3rem;

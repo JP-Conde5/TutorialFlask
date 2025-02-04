@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
     {% block conteudo %}
-        <p>Essa é a segunda página do meu site</p>
-        <a href="/">Voltar</a>
+        <div class="container">
+            <form action="/pagina2" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome do Site:</label>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Github">
+                </div>
+                <div class="form-group">
+                    <label for="dominio">Domínio do Site:</label>
+                    <input type="text" class="form-control" name="dominio" id="dominio" placeholder="Github">
+                </div>
+                <br>
+                <div class="row">
+                    <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+                    <button type="reset" class="btn btn-outline-danger">Cancelar</button>
+                </div>
+            </form>
+        </div>
     {% endblock %}
